@@ -1,0 +1,60 @@
+/* components/tabbar/tabbar.wxss */
+.id {
+  color: #FDD040;
+}
+.van-tabbar {
+  width: 375px;
+  height: 76px;
+  background-color: #142941;
+  background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/tabbar/bg_tabbar.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.van-tabbar-item {
+  flex-direction: row;
+}
+
+.tabbar-item-0 {
+  position: relative;
+  top: 10px;
+  width: 56px;
+  height: 30px;
+  opacity: 1;
+}
+.tabbar-item-1 {
+  position: relative;
+  top: -16.26px;
+  z-index: 999;
+}
+.tabbar-item-2 {
+  position: relative;
+  top: 10px;
+  width: 52px;
+  height: 30px;
+  opacity: 1;
+}
+
+.tabbar-item-0 .tabbar-item-icon,
+.tabbar-item-2 .tabbar-item-icon {
+  width: 26px;
+  height: 30px;
+}
+
+.tabbar-item-0 .tabbar-item-text,
+.tabbar-item-2 .tabbar-item-text {
+  width: 26px;
+  height: 17px;
+  margin-left: 4px;
+  border-radius: 1px;
+  opacity: 1;
+  font-size: 9px;
+}
+
+.tabbar-item-1 .tabbar-item-icon {
+  width: 80px;
+  height: 83.41px;
+}
+
+.icon-active {
+  background: linear-gradient(270deg, rgba(140, 247, 216, .3), rgba(140, 247, 216, 0));
+}

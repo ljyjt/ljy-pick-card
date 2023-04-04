@@ -1,0 +1,49 @@
+<view>
+  <view class="container-top">
+    <!-- banner 轮播图 -->
+    <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="#AEFFE8" indicator-color="rgb(0,0,0,.3)" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style="height: 281px;">
+      <block wx:for="{{bannerList}}" wx:key="unique">
+        <swiper-item>
+          <view class="swiper-item-bg" style="background-image:url({{item.pic}})"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 隔断部分 -->
+    <view class="page-divider"></view>
+  </view>
+
+  <!-- 页面入口 -->
+  <view class="page-links">
+    <!-- 1.成就 -->
+    <navigator class="page-links-page page-achieveCenter" url="/pages/achieveCenter/achieveCenter">
+      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/index/link_achivement.png"/>
+    </navigator>
+    <!-- 2.抽卡 -->
+    <navigator class="page-links-page page-openCardCoin" url="/pages/openCardCoin/openCardCoin">
+      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/index/link_open_card_coin.png"/>
+    </navigator>
+    <!-- 3.商城 -->
+    <navigator class="page-links-page page-cionStore" url="/pages/cionStore/cionStore">
+      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/index/link_coin_store_220.png"/>
+    </navigator>
+  </view>
+
+  <!-- 卡包 抽卡入口 -->
+  <view class="card-list" wx:for="{{indexCardList}}" wx:key="index">
+    <view class="card-list-item">
+      <view class="intro-btn"></view>
+      <image class="intro-image" src="{{item.bevel_img}}"/>
+      <view class="item-cont">
+        <view>
+          <view class="item-cont-text1">{{item.title}}</view>
+          <view class="item-cont-text2">{{item.title_1able}}</view>
+        </view>
+        <navigator class="item-cont-btn" url="#"></navigator>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- tabBar -->
+<tabbar></tabbar>

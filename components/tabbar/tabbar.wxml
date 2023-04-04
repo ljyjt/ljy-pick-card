@@ -1,0 +1,17 @@
+<van-tabbar active="{{ active }}" bind:change="onChange" placeholder="true" border="false">
+  <van-tabbar-item wx:for="{{tabbar.list}}" wx:key="unique" class="tabbar-item-{{index}}" name="{{item.pagePath}}">
+    <image
+      slot="icon"
+      src="{{ item.normal }}"
+      mode="aspectFit"
+      class="tabbar-item-icon icon-normal"
+    />
+    <image
+      slot="icon-active"
+      src="{{ item.active }}"
+      mode="aspectFit"
+      class="tabbar-item-icon icon-active"
+    />
+    <text class="tabbar-item-text">{{item.text}}</text>
+  </van-tabbar-item>
+</van-tabbar>
