@@ -5,7 +5,15 @@
     "pages/pickCard/pickCard",
     "pages/achieveCenter/achieveCenter",
     "pages/openCardCoin/openCardCoin",
-    "pages/cionStore/cionStore"
+    "pages/cionStore/cionStore",
+    "pages/orderList/orderList",
+    "pages/pickCardList/pickCardList",
+    "pages/recycleHistory/recycleHistory",
+    "pages/message/message",
+    "pages/chooseCard/chooseCard",
+    "pages/addressList/addressList",
+    "pages/question/question",
+    "pages/setting/setting"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -15,8 +23,6 @@
   },
   "tabBar": {
     "custom": true,
-    "color": "#A1865C",
-    "selectedColor": "#613417",
     "list": [
       {
         "pagePath": "pages/index/index",

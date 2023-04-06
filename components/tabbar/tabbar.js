@@ -50,14 +50,12 @@ Component({
        */
       methods: {
         onChange(e) {
-          if (e.detail == '/pages/pickCard/pickCard') {
-            wx.navigateTo({
-              url: e.detail
-            });
+          console.log(e.detail);
+          this.setData({active: e.detail})
+          if(e.detail === '/pages/pickCard/pickCard') {
+            wx.navigateTo({ url: e.detail })
           } else {
-            wx.switchTab({
-              url: e.detail
-            });
+            wx.switchTab({ url: e.detail })
           }
         }
       }

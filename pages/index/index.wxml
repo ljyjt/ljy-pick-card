@@ -2,7 +2,7 @@
   <view class="container-top">
     <!-- banner 轮播图 -->
     <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="#AEFFE8" indicator-color="rgb(0,0,0,.3)" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style="height: 281px;">
-      <block wx:for="{{bannerList}}" wx:key="unique">
+      <block wx:for="{{bannerList}}" wx:key="id">
         <swiper-item>
           <view class="swiper-item-bg" style="background-image:url({{item.pic}})"></view>
         </swiper-item>
@@ -16,21 +16,21 @@
   <view class="page-links">
     <!-- 1.成就 -->
     <navigator class="page-links-page page-achieveCenter" url="/pages/achieveCenter/achieveCenter">
-      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/index/link_achivement.png"/>
+      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/link_achivement.png"/>
     </navigator>
     <!-- 2.抽卡 -->
     <navigator class="page-links-page page-openCardCoin" url="/pages/openCardCoin/openCardCoin">
-      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/index/link_open_card_coin.png"/>
+      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/link_open_card_coin.png"/>
     </navigator>
     <!-- 3.商城 -->
     <navigator class="page-links-page page-cionStore" url="/pages/cionStore/cionStore">
-      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist/index/link_coin_store_220.png"/>
+      <image class="page-links-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/link_coin_store_220.png"/>
     </navigator>
   </view>
 
   <!-- 卡包 抽卡入口 -->
-  <view class="card-list" wx:for="{{indexCardList}}" wx:key="index">
-    <view class="card-list-item">
+  <view class="card-list">
+    <view class="card-list-item" wx:for="{{indexCardList}}" wx:key="title">
       <view class="intro-btn"></view>
       <image class="intro-image" src="{{item.bevel_img}}"/>
       <view class="item-cont">

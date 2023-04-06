@@ -1,5 +1,5 @@
-<van-tabbar active="{{ active }}" bind:change="onChange" placeholder="true" border="false">
-  <van-tabbar-item wx:for="{{tabbar.list}}" wx:key="unique" class="tabbar-item-{{index}}" name="{{item.pagePath}}">
+<van-tabbar active="{{ active }}" bind:change="onChange" placeholder border="{{false}}">
+  <van-tabbar-item wx:for="{{tabbar.list}}" wx:key="name" class="tabbar-item-{{index}}" name="{{item.pagePath}}">
     <image
       slot="icon"
       src="{{ item.normal }}"
@@ -12,6 +12,6 @@
       mode="aspectFit"
       class="tabbar-item-icon icon-active"
     />
-    <text class="tabbar-item-text">{{item.text}}</text>
+    <text class="tabbar-item-text">{{item.text}}{{active}}</text>
   </van-tabbar-item>
 </van-tabbar>

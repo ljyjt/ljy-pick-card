@@ -1,5 +1,115 @@
 <!--pages/mine/mine.wxml-->
-<text>我的</text>
+<view class="wrap">
+  <!-- 头部 -->
+  <view class="header">
+    <!-- user基本信息 -->
+    <view class="user-cont">
+      <!-- 头像、登录 -->
+      <view class="user-info">
+        <view class="pic"></view>
+        <view class="info-msg">
+          <view class="load">登录</view>
+        </view>
+      </view>
+      <!-- 基本信息 -->
+      <view class="user-msg">
+        <!-- 我的成就 -->
+        <view class="msg-achieve">
+          <view class="achieve-left">我的成就</view>
+          <text class="achieve-num">0</text>
+        </view>
+        <!-- 卡集 -->
+        <view class="msg-cards">
+          <view class="cards-left">卡集</view>
+          <text class="cards-num">0</text>
+          <text class="unit">套</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单服务 -->
+  <view class="tools-cont">
+    <view class="title">订单服务</view>
+    <view class="tools-box">
+      <!-- 发货订单 -->
+      <navigator url="/pages/orderList/orderList">
+        <view class="tool-item">
+          <image class="tool-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_order_delivery.png" />
+          <view class="tool-title">发货订单</view>
+        </view>
+      </navigator>
+      <!-- 抽卡订单 -->
+      <navigator url="/pages/pickCardList/pickCardList">
+        <view class="tool-item">
+          <image class="tool-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_order_order.png" />
+          <view class="tool-title">抽卡订单</view>
+        </view>
+      </navigator>
+      <!-- 回收记录 -->
+      <navigator url="/pages/recycleHistory/recycleHistory">
+        <view class="tool-item">
+          <image class="tool-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_order_recycle.png" />
+          <view class="tool-title">回收记录</view>
+        </view>
+      </navigator>
+      <!-- 物流消息 -->
+      <navigator url="/pages/message/message">
+        <view class="tool-item">
+          <image class="tool-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_order_logistics.png" />
+          <view class="tool-title">物流消息</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 其他服务 -->
+  <view class="other-services">
+    <view class="title">其他服务</view>
+    <view class="services-box">
+      <!-- 卡片背包 -->
+      <navigator url="/pages/chooseCard/chooseCard">
+        <view class="service-item">
+          <image class="service-icon" src="" />
+          <view class="service-title">卡片背包</view>
+        </view>
+      </navigator>
+      <!-- 惊喜商城 -->
+      <navigator url="/pages/cionStore/cionStore">
+        <view class="service-item">
+          <image class="service-icon" src="" />
+          <view class="service-title">惊喜商城</view>
+        </view>
+      </navigator>
+      <!-- 地址管理 -->
+      <navigator url="/pages/addressList/addressList">
+        <view class="service-item">
+          <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_adress.png" />
+          <view class="service-title">地址管理</view>
+        </view>
+      </navigator>
+      <!-- 帮助中心 -->
+      <navigator url="/pages/question/question">
+        <view class="service-item">
+          <image class="service-icon" src="" />
+          <view class="service-title">帮助中心</view>
+        </view>
+      </navigator>
+      <!-- 兑换中心 -->
+      <view class="service-item">
+        <image class="service-icon" src="" />
+        <view class="service-title">兑换中心</view>
+      </view>
+      <!-- 设置 -->
+      <navigator url="/pages/setting/setting">
+        <view class="service-item">
+          <image class="service-icon" src="" />
+          <view class="service-title">设置</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
 
 <!-- tabBar -->
 <tabbar></tabbar>
