@@ -1,0 +1,253 @@
+@mixin bgi {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+page {
+  background-color: #142941;
+}
+
+.wrap {
+  // 头部背景
+  .header {
+    position: relative;
+    width: 750rpx;
+    height: 625rpx;
+    background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/bg_mine.png);
+    @include bgi();
+
+    // 用户基本信息
+    .user-cont {
+      position: absolute;
+      left: 30rpx;
+      bottom: 140rpx;
+      width: 686rpx;
+      height: 294rpx;
+      background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/bg_mine_card.png);
+      @include bgi();
+
+      // 登录
+      .user-info {
+        position: absolute;
+        left: 50rpx;
+        top: -22rpx;
+        width: 336rpx;
+        height: 144rpx;
+
+        .pic {
+          width: 144rpx;
+          height: 144rpx;
+          background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/avatar_default.png);
+          @include bgi();
+        }
+
+        .info-msg {
+          position: absolute;
+          left: 168rpx;
+          top: 50rpx;
+          width: 168rpx;
+          height: 94rpx;
+
+          .load {
+            font-size: 36rpx;
+            color: #fff;
+            font-weight: 700;
+          }
+
+          // .load::after {
+          //   position: absolute;
+          //   display: inline-block;
+          //   right: 10rpx;
+          //   top: 5rpx;
+          //   content: '';
+          //   width: 40rpx;
+          //   height: 40rpx;
+          //   background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_refresh.png);
+          //   @include bgi();
+          // }
+        }
+      }
+
+      // 基本信息
+      .user-msg {
+
+        // 我的成就
+        .msg-achieve {
+          .achieve-left {
+            position: absolute;
+            left: 64rpx;
+            bottom: 44rpx;
+            font: 500 22rpx PingFang SC;
+            color: #BFC4CC;
+          }
+
+          .achieve-left::before {
+            content: '';
+            display: block;
+            width: 36rpx;
+            height: 36rpx;
+            margin-bottom: 9rpx;
+            background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_achievement.png);
+            @include bgi();
+          }
+
+          .achieve-left::after {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            top: 45rpx;
+            width: 32rpx;
+            height: 32rpx;
+            background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/icons/icon_more.png);
+            @include bgi();
+          }
+
+          .achieve-num {
+            position: absolute;
+            left: 260rpx;
+            bottom: 36rpx;
+            color: #fff;
+            font: 500 76rpx Number;
+          }
+        }
+
+        // 卡集
+        .msg-cards {
+          .cards-left {
+            position: absolute;
+            left: 394rpx;
+            bottom: 44rpx;
+            font: 500 22rpx PingFang SC;
+            color: #BFC4CC;
+          }
+
+          .cards-left::before {
+            content: '';
+            display: block;
+            width: 36rpx;
+            height: 36rpx;
+            margin-bottom: 9rpx;
+            background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_cardcollection.png);
+            @include bgi();
+          }
+
+          .cards-left::after {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            top: 45rpx;
+            width: 32rpx;
+            height: 32rpx;
+            background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/icons/icon_more.png);
+            @include bgi();
+          }
+
+          .cards-num {
+            position: absolute;
+            right: 76rpx;
+            bottom: 36rpx;
+            color: #fff;
+            font: 500 76rpx Number;
+          }
+
+          .unit {
+            position: absolute;
+            font-size: 22rpx;
+            font-weight: 500;
+            color: #fff;
+            right: 48rpx;
+            bottom: 46rpx;
+          }
+        }
+      }
+    }
+  }
+
+  //订单服务
+  .tools-cont {
+    position: relative;
+    top: -93rpx;
+    width: 686rpx;
+    height: 256rpx;
+    margin: 0 32rpx -93rpx;
+    background-color: #2a3d52ff;
+    border-radius: 20rpx;
+
+    .title {
+      position: absolute;
+      top: 32rpx;
+      left: 32rpx;
+      font-size: 30rpx;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .tools-box {
+      position: absolute;
+      display: flex;
+      left: 32rpx;
+      bottom: 32rpx;
+      width: 620rpx;
+      height: 118rpx;
+
+      .tool-item {
+        width: 92rpx;
+        height: 118rpx;
+        margin-right: 84rpx;
+
+        .tool-icon {
+          width: 80rpx;
+          height: 80rpx;
+        }
+
+        .tool-title {
+          color: #BFC4CC;
+          font-size: 22rpx;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // 其他服务
+  .other-services {
+    position: relative;
+    width: 686rpx;
+    height: 374rpx;
+    margin: 32rpx 32rpx 0;
+    background-color: #2a3d52ff;
+    border-radius: 20rpx;
+    .title {
+      position: absolute;
+      top: 32rpx;
+      left: 32rpx;
+      font-size: 30rpx;
+      font-weight: 700;
+      color: #fff;
+    }
+    .services-box {
+      position: absolute;
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+      align-items: center;
+      left: 32rpx;
+      bottom: 32rpx;
+      width: 620rpx;
+      height: 236rpx;
+      background-color: pink;
+      .service-item {
+        width: 92rpx;
+        height: 98rpx;
+        background-color: blue;
+      }
+
+      .service-icon {
+        width: 60rpx;
+        height: 60rpx;
+      }
+    }
+    
+  }
+}

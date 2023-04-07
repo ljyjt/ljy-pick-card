@@ -1,0 +1,119 @@
+@mixin bgi {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+page {
+  background-color: #142941;
+}
+
+/* 轮播图 */
+.container-top {
+  position: relative;
+  .wx-swiper-dot {
+    position: relative;
+    top: -48rpx;
+    width: 12rpx !important;
+    height: 12rpx !important;
+  }
+  .swiper-item-bg {
+    width: 100%;
+    height: 100%;
+    @include bgi();
+  }
+
+  /* 隔断部分 */
+  .page-divider {
+    position: absolute;
+    top: 514rpx;
+    height: 48rpx;
+    width: 100%;
+    background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/bg_home.png);
+    @include bgi();
+  }
+}
+
+/* 页面入口 */
+.page-links {
+  position: relative;
+  width: 686rpx;
+  height: 278rpx;
+  margin: 16rpx 32rpx 0;
+  .page-links-img {
+    position: absolute;
+    width: 214rpx;
+    height: 246rpx;
+  }
+  .page-achieveCenter .page-links-img {
+    top: 32rpx;
+  }
+  .page-openCardCoin .page-links-img {
+    height: 256rpx;
+    left: 236rpx;
+  }
+  .page-cionStore .page-links-img {
+    top: 32rpx;
+    left: 472rpx;
+  }
+}
+
+/* 卡包 抽卡入口 */
+.card-list-item {
+  position: relative;
+  width: 686rpx;
+  height: 342rpx;
+  margin: 48rpx 32rpx 0;
+  background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/frame_card_list.png);
+  @include bgi();
+
+  .intro-image {
+    height: 100%;
+  }
+  .intro-btn {
+    position: absolute;
+    right: 0;
+    width: 88rpx;
+    height: 42rpx;
+    background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/btn_intro.png);
+    @include bgi();
+  }
+  .item-cont {
+    position: absolute;
+    right: 0;
+    bottom: 32rpx;
+    width: 294rpx;
+    height: 234rpx;
+    text-align: center;
+    .item-cont-text1 {
+      color: #BFC4CC;
+      font-size: 24rpx;
+      line-height: 34rpx;
+      margin-bottom: 8rpx;
+    }
+    .item-cont-text2 {
+      color: #fff;
+      font-size: 32rpx;
+      font-weight: 700;
+    }
+    .item-cont-btn {
+      position: absolute;
+      bottom: 0;
+      right: 46rpx;
+      width: 204rpx;
+      height: 72rpx;
+      background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/btn_open_card.png);
+      @include bgi();
+    }
+    .item-cont-btn::before {
+      position: absolute;
+      display: block;
+      top: -60rpx;
+      content: "";
+      width: 204rpx;
+      height: 11rpx;
+      background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/index/cutline_card.png);
+      @include bgi();
+    }
+  }
+}
