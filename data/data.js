@@ -88,6 +88,7 @@ export const deliveryList = [
     ],
   },
 ];
+// export const deliveryList = [];
 
 //cdk兑换
 export const exchangeCode = {
