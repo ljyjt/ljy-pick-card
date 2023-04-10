@@ -46,4 +46,4 @@
 </view>
 
 <!-- tabBar -->
-<tabbar></tabbar>
+<tabbar active="/pages/index/index"></tabbar>

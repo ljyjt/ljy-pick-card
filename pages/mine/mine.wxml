@@ -68,48 +68,38 @@
     <view class="title">其他服务</view>
     <view class="services-box">
       <!-- 卡片背包 -->
-      <navigator url="/pages/chooseCard/chooseCard">
-        <view class="service-item">
-          <image class="service-icon" src="" />
+      <navigator url="/pages/chooseCard/chooseCard" class="service-item service-item-1">
+          <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_bag.webp" />
           <view class="service-title">卡片背包</view>
-        </view>
       </navigator>
       <!-- 惊喜商城 -->
-      <navigator url="/pages/cionStore/cionStore">
-        <view class="service-item">
-          <image class="service-icon" src="" />
+      <navigator url="/pages/cionStore/cionStore" class="service-item">
+          <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_store.png" />
           <view class="service-title">惊喜商城</view>
-        </view>
       </navigator>
       <!-- 地址管理 -->
-      <navigator url="/pages/addressList/addressList">
-        <view class="service-item">
+      <navigator url="/pages/addressList/addressList" class="service-item">
           <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_adress.png" />
           <view class="service-title">地址管理</view>
-        </view>
       </navigator>
       <!-- 帮助中心 -->
-      <navigator url="/pages/question/question">
-        <view class="service-item">
-          <image class="service-icon" src="" />
+      <navigator url="/pages/question/question" class="service-item">
+          <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_help.png" />
           <view class="service-title">帮助中心</view>
-        </view>
       </navigator>
       <!-- 兑换中心 -->
-      <view class="service-item">
-        <image class="service-icon" src="" />
+      <view class="service-item service-item-5">
+        <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_cdk.png" />
         <view class="service-title">兑换中心</view>
       </view>
       <!-- 设置 -->
-      <navigator url="/pages/setting/setting">
-        <view class="service-item">
-          <image class="service-icon" src="" />
+      <navigator url="/pages/setting/setting" class="service-item">
+          <image class="service-icon" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/mine/icon_mine_other_set.png" />
           <view class="service-title">设置</view>
-        </view>
       </navigator>
     </view>
   </view>
 </view>
 
 <!-- tabBar -->
-<tabbar></tabbar>
+<tabbar active="/pages/mine/mine"></tabbar>

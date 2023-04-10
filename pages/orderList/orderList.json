@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "发货订单",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#2A3D52",
+  "usingComponents": {
+    "tabs-nav": "/components/tabs-nav/tabs-nav"
+  }
 }

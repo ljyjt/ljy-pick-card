@@ -1,2 +1,50 @@
 <!--pages/orderList/orderList.wxml-->
-<text>pages/orderList/orderList.wxml</text>
+<!-- 头部区域 -->
+<view class="header">
+  <tabs-nav active="{{active}}"></tabs-nav>
+  <view class="order-head"></view>
+</view>
+<!-- 订单区域 -->
+<view class="orders-box">
+  <!-- 订单内容【有内容】-->
+  <scroll-view scroll-y wx:if="{{deliveryList && deliveryList.length>0}}">
+      <!-- 待发货 -->
+      <view wx:if="{{active === 0}}">
+        待发货1111
+      </view>
+      <!-- 已发货 -->
+      <view wx:else>
+        已发货
+      </view>
+  </scroll-view>
+  <!-- 订单内容【无内容】 -->
+  <view class="nothing" wx:else>
+    <image class="nothing-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/common/empty.png"/>
+    <text class="nothing-text">这里没有订单哦</text>
+  </view>
+
+
+  <!-- <view class="order-item">
+      <image class="item-image" src="{{item.series[0].draw_img}}"/>
+      <view class="item-msg">
+        <text class="title">{{item.series[0].title}}</text>
+        <text class="time">订单时间 {{item.pay_at}}</text>
+        <text class="status">订单状态 <text class="status-msg">{{item.statusStr}}</text></text>
+      </view>
+      <text class="num">发货数量 <text class="num-msg">{{item.series[0].num}}</text></text>
+      <view class="item-btn">查看订单</view>
+    </view> -->
+
+  <!-- <view class="order-item">
+    <image class="item-image" src="" mode=""/>
+    <view class="item-msg">
+      <text class="title">名称</text>
+      <text class="time">订单时间 111</text>
+      <text class="status">订单状态 <text class="status-msg">111</text></text>
+    </view>
+    <text class="num">发货数量 <text class="num-msg">111</text></text>
+    <view class="item-btn">查看订单</view>
+  </view> -->
+  <!-- 悬浮卡片发货 -->
+  <navigator class="card-delivery" url="/pages/chooseCard/chooseCard"></navigator>
+</view>

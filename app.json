@@ -19,10 +19,13 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#142941"
   },
   "tabBar": {
     "custom": true,
+    "color": "#A1865C",
+    "selectedColor": "#613417",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -39,7 +42,7 @@
     ]
   },
   "usingComponents": {
-    "tabbar": "/components/tabbar/tabbar"
+    "tabbar": "/components/custom-tab-bar/custom-tab-bar"
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -186,6 +186,7 @@ page {
     .tools-box {
       position: absolute;
       display: flex;
+      justify-content: space-between;
       left: 32rpx;
       bottom: 32rpx;
       width: 620rpx;
@@ -194,7 +195,6 @@ page {
       .tool-item {
         width: 92rpx;
         height: 118rpx;
-        margin-right: 84rpx;
 
         .tool-icon {
           width: 80rpx;
@@ -228,26 +228,33 @@ page {
     }
     .services-box {
       position: absolute;
-      display: flex;
-      justify-content: start;
-      flex-wrap: wrap;
-      align-items: center;
       left: 32rpx;
       bottom: 32rpx;
       width: 620rpx;
       height: 236rpx;
-      background-color: pink;
       .service-item {
+        display: inline-block;
         width: 92rpx;
         height: 98rpx;
-        background-color: blue;
+        box-sizing: border-box;
+        margin-left: 84rpx;
+        margin-bottom: 40rpx;
+        .service-title {
+          font-size: 22rpx;
+          font-weight: 500;
+          color: #BFC4CC;
+          text-align: center;
+        }
+        .service-icon {
+          width: 60rpx;
+          height: 60rpx;
+          margin: 0rpx 16rpx;
+        }
       }
-
-      .service-icon {
-        width: 60rpx;
-        height: 60rpx;
+      .service-item-1,
+      .service-item-5 {
+        margin-left: 0;
       }
     }
-    
   }
 }
