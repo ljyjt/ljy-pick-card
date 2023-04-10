@@ -1,0 +1,24 @@
+var delivery = {
+  deliveried: function(deliveryList) {
+    var arr = [];
+    deliveryList.forEach(function(item) {
+      if(item.statusStr==='已发货') {
+        arr.push(item);
+      }
+    })
+    return arr;
+  },
+  undelivery: function(deliveryList) {
+    var arr = [];
+    deliveryList.forEach(function(item) {
+      if(item.statusStr==='未发货') {
+        arr.push(item);
+      }
+    })
+    return arr;
+  }
+}
+module.exports = {
+  deliveried: delivery.deliveried,
+  undelivery: delivery.undelivery
+}
