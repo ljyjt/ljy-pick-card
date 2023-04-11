@@ -5,7 +5,6 @@ Component({
     styleIsolation: 'shared'
   },
   properties: {
-    
   },
   data: {
     logisticsList,
@@ -31,7 +30,8 @@ Component({
     isDown: '',
     // 详情页是否展开:false不展开 true展开
     detailDown: false,
-    currentIndex: []
+    currentIndex: [],
+    x: 22
   },
   methods: {
     dropDown(e) {
@@ -41,9 +41,13 @@ Component({
       //   this.setData({drop: 0,isDown: ''})
       // }
 
-      // let index = e.currentTarget.dataset.index;
-      // this.setData({currentIndex: index});
-      // console.log(this.properties.currentIndex);
+      let index = e.currentTarget.dataset.index;
+      if(!this.data.currentIndex.includes(index)) {
+        this.data.currentIndex.push(index);
+      } else {
+        this.setData({currentIndex: this.data.currentIndex.filter(item => item !== index)});
+      }
+      console.log(this.data.currentIndex);
 
       // let item = e.currentTarget.dataset.list;
       // console.log(index,item);

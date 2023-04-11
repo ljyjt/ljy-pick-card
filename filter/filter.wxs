@@ -19,7 +19,12 @@ var delivery = {
   }
 }
 
+var includes = function(arr,ele) {
+  return arr.indexOf(ele) !== -1;
+}
+
 module.exports = {
   deliveried: delivery.deliveried,
-  undelivery: delivery.undelivery
+  undelivery: delivery.undelivery,
+  includes: includes
 }

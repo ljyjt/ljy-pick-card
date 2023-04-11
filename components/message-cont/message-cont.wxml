@@ -1,8 +1,9 @@
-<view class="cont" wx:for="{{logisticsList}}" wx:key="delivery_no" bindtap="tap">
+<view wx:for="{{logisticsList}}" wx:key="delivery_no" class="cont {{filter.includes(currentIndex,index) ? selected : ''}}">
   <!-- 物流基本信息 -->
   <view class="cont-box">
     <!-- 物流 -->
     <view class="delivery">
+    11111{{currentIndex}}
       <view class="delivery-text">物流：{{item.shipper}}</view>
       <view class="delivery-copy"></view>
       <!-- 1111111111111111111111111111111111111111111111111 -->
@@ -30,3 +31,4 @@
     </view>
   </view>
 </view>
+<wxs src="../../filter/filter.wxs" module="filter"></wxs>
