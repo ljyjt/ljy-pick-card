@@ -1,5 +1,5 @@
 <!--components/tabs-nav/tabs-nav.wxml-->
-<van-tabs class="tabs-nav-wrap" active="{{ active }}" bind:click="onClick" title-active-color="#AEFFE8" title-inactive-color="#fff" line-height="6rpx" line-width="28rpx" color="#AEFFE8">
+<van-tabs class="tabs-nav-wrap" bind:change="onChange" title-active-color="#AEFFE8" title-inactive-color="#fff" line-height="6rpx" line-width="28rpx" color="#AEFFE8">
   <van-tab title="待发货" class="tabs-nav-item item-left"></van-tab>
   <van-tab title="已发货" class="tabs-nav-item item-right"></van-tab>
 </van-tabs>

@@ -11,13 +11,14 @@ var delivery = {
   undelivery: function(deliveryList) {
     var arr = [];
     deliveryList.forEach(function(item) {
-      if(item.statusStr==='未发货') {
+      if(item.statusStr==='待发货') {
         arr.push(item);
       }
     })
     return arr;
   }
 }
+
 module.exports = {
   deliveried: delivery.deliveried,
   undelivery: delivery.undelivery

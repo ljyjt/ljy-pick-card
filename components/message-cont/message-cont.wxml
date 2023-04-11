@@ -1,0 +1,32 @@
+<view class="cont" wx:for="{{logisticsList}}" wx:key="delivery_no" bindtap="tap">
+  <!-- 物流基本信息 -->
+  <view class="cont-box">
+    <!-- 物流 -->
+    <view class="delivery">
+      <view class="delivery-text">物流：{{item.shipper}}</view>
+      <view class="delivery-copy"></view>
+      <!-- 1111111111111111111111111111111111111111111111111 -->
+      <view class="drop-btn" bindtap="dropDown" data-index="{{index}}" data-list="{{item}}"></view>
+    </view>
+    <!-- 订单编号 -->
+    <view class="order-cont">
+      订单编号：
+      <text class="text-left">{{item.delivery_no}}</text>
+      <text class="text-right">复制</text>
+    </view>
+    <!-- 发货时间 -->
+    <view class="time">发货时间：{{item.delivery_time}}</view>
+    <!-- 卡片数量 -->
+    <view class="card-num">卡片数量：<text class="num">300张</text></view>
+  </view>
+  <!-- 物流详情（下拉） -->
+  <!-- 1111111111111111111111111111111111111111111111111 -->
+  <view class="dropDown" wx:if="{{item.detailDown}}">
+    <!-- 隔断 -->
+    <view class="divide"></view>
+    <!-- 详情 -->
+    <view class="dropDown-detail" >
+      <van-steps steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="#AEFFE8" inactive-color="#959CAD"/>
+    </view>
+  </view>
+</view>

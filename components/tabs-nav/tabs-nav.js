@@ -4,19 +4,16 @@ Component({
   options: {
     styleIsolation: 'shared'
   },
+  properties: {
+    active: Number
+  },
   data: {
-    deliveryList,
-    active: 0
+    deliveryList
   },
   methods: {
-    onClick(event) {
-      // if(event.detail.index === 0) {
-      //   this.setData({undelivery: this.data.deliveryList.filter(item => item.statusStr === '待发货')});
-      // } else {
-      //   this.setData({deliveried: this.data.deliveryList.filter(item => item.statusStr === '已发货')});
-      // }
-      this.setData({active: event.detail.index})
-      console.log(this.data.active);
+    onChange(e) {
+      this.setData({active: e.detail.index})
+      this.triggerEvent('changeActive',this.properties.active)
     }
   }
 })

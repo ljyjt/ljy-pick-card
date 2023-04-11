@@ -1,2 +1,10 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<!-- 有数据内容 -->
+<view class="cont-box" wx:if="{{logisticsList && logisticsList.length > 0}}">
+  <message-cont></message-cont>
+</view>
+<!-- 无数据内容 -->
+<view class="empty" wx:else>
+  <image class="empty-img" src="https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/common/empty.png"></image>
+  <view class="empty-text">暂无数据</view>
+</view>

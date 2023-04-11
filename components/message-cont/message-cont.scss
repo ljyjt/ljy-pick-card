@@ -1,0 +1,149 @@
+/* components/message-cont/message-cont.wxss */
+@mixin bgi() {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.down {
+  transition: linear .3s;
+  transform: rotate(180deg);
+}
+
+.cont {
+  position: relative;
+  width: 686rpx;
+  margin: 16rpx 32rpx;
+  background-color: #2A3D52;
+
+  //物流基本信息
+  .cont-box {
+    height: 248rpx;
+
+    // 物流
+    .delivery {
+      position: absolute;
+      width: 574rpx;
+      height: 64rpx;
+      top: 32rpx;
+      left: 32rpx;
+      background-color: #142941;
+      line-height: 64rpx;
+      border-left: 1px solid #AEFFE8;
+
+      .delivery-text {
+        padding-left: 14rpx;
+        font-size: 26rpx;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .delivery-copy {
+        position: absolute;
+        width: 48rpx;
+        height: 48rpx;
+        bottom: 8rpx;
+        right: 70rpx;
+        background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/message/icon_copy.png);
+        @include bgi();
+      }
+
+      .drop-btn {
+        position: absolute;
+        width: 32rpx;
+        height: 32rpx;
+        top: 14rpx;
+        left: 590rpx;
+        background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/message/icon_bg_up.png);
+        @include bgi();
+        transition: linear .3s;
+      }
+    }
+
+    // 订单编号
+    .order-cont {
+      position: absolute;
+      height: 36rpx;
+      top: 128rpx;
+      left: 32rpx;
+      line-height: 36rpx;
+      font-size: 24rpx;
+      font-weight: 500;
+      color: #BFC4CC;
+
+      .text-left {
+        color: #FFFFFF;
+
+        &::after {
+          display: inline-block;
+          content: '';
+          width: 16rpx;
+          height: 24rpx;
+          margin-right: 16rpx;
+          border-right: 2rpx solid #485A6D;
+        }
+      }
+
+      .text-right {
+        font-weight: 700;
+        color: #FFF0BA;
+      }
+    }
+
+    // 发货时间
+    .time {
+      position: absolute;
+      width: 310rpx;
+      height: 36rpx;
+      top: 180rpx;
+      left: 32rpx;
+      font-size: 20rpx;
+      font-weight: 500;
+      color: #BFC4CC;
+      line-height: 36rpx;
+    }
+
+    //卡片数量
+    .card-num {
+      position: absolute;
+      width: 156rpx;
+      height: 36rpx;
+      top: 180rpx;
+      right: 32rpx;
+      font-size: 20rpx;
+      font-weight: 500;
+      color: #BFC4CC;
+
+      .num {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  //物流详情（下拉）
+  .dropDown {
+    .divide {
+      position: absolute;
+      width: 622rpx;
+      height: 12rpx;
+      left: 32rpx;
+      background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/message/cutline_price.png);
+      @include bgi();
+    }
+
+    .dropDown-detail {
+      padding-top: 32rpx;
+
+      .van-steps {
+        background-color: #2A3D52;
+        font-size: 26rpx;
+        font-weight: 700;
+
+        .van-step__circle {
+          width: 16rpx;
+          height: 16rpx;
+        }
+      }
+    }
+  }
+}
