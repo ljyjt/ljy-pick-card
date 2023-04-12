@@ -10,8 +10,8 @@
     <!-- 订单编号 -->
     <view class="order-cont">
       订单编号：
-      <text class="text-left">{{item.delivery_no}}</text>
-      <text class="text-right" catchtap="copyDelivery" data-text="{{item.delivery_no}}">复制</text>
+      <text class="text-left">{{item.shipment_no}}</text>
+      <text class="text-right" catchtap="copyDelivery" data-text="{{item.shipment_no}}">复制</text>
     </view>
     <!-- 发货时间 -->
     <view class="time">发货时间：{{item.delivery_time}}</view>
@@ -19,16 +19,19 @@
     <view class="card-num">卡片数量：<text class="num">300张</text></view>
   </view>
   <!-- 物流详情（下拉） -->
-  <view class="dropDown" style="display: block;">
+  <view class="dropDown">
     <!-- 隔断 -->
     <view class="divide"></view>
     <!-- 详情 -->
-    <view class="dropDown-detail">
-      <view class="detail-top">
-        <view class="top-left">已签收</view>
-        <view class="top-right">2023.04.12</view>
+    <view class="dropDown-detail detail-{{traceIndex === 0 ? 'selected' : ''}}" wx:for="{{traces}}" wx:key="index" wx:for-item="trace" wx:for-index="traceIndex">
+      <view class="line">
+        <view class="line-item"></view>
+        <view class="circle"></view>
       </view>
-      <text class="detail-bottom">xxxxxxxxxxxxxxxxxxx</text>
+      <view class="detail-top">
+        {{trace.status}}<text class="top-time">{{trace.AcceptTime}}</text>
+      </view>
+      <view class="detail-bottom">{{trace.AcceptStation}}</view>
     </view>
   </view>
 </view>

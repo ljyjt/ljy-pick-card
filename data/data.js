@@ -113,11 +113,11 @@ export const logisticsList = [
         AcceptStation: '您的快件已到达【苏州昆山集货分拣中心】',
         AcceptTime: '2023-03-14 23:39:47',
       },
-      {
-        AcceptStation:
-          '您的快件已由【三和苑柜子】代收，感谢您使用京东物流，期待再次为您服务。',
-        AcceptTime: '2023-03-16 13:58:03',
-      },
+      // {
+      //   AcceptStation:
+      //     '您的快件已由【三和苑柜子】代收，感谢您使用京东物流，期待再次为您服务。',
+      //   AcceptTime: '2023-03-16 13:58:03',
+      // },
     ],
   },
   {
@@ -125,7 +125,7 @@ export const logisticsList = [
     delivery_time: '2022-11-15 10:04:00',
     shipper: '顺丰快递',
     shipment_no: 'D202211141040376609',
-    delivery_type: 1,
+    delivery_type: 3,
     traces: [
       {
         AcceptStation:
@@ -144,4 +144,5 @@ export const logisticsList = [
     ],
   },
 ];
+
 // export const logisticsList = []

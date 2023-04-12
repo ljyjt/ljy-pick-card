@@ -11,7 +11,8 @@ Component({
   },
   data: {
     active: 0,
-    flag: 0
+    flag: 0,
+    traces: []
   },
   methods: {
     //下拉物流详情页
@@ -34,6 +35,28 @@ Component({
   lifetimes: {
     attached() {
       // console.log("2222", this.data.item);
+      let {item} = this.data;
+      let arr = item.traces;
+      arr.forEach((item,index) => {
+        switch(index) {
+          case 0:
+            item.status = '已揽收';
+            break;
+          case 1:
+              item.status = '运输中';
+              break;
+          case 2:
+            item.status = '待收货';
+            break;
+          case 3:
+            item.status = '已收获';
+            break;
+        }
+      })
+      this.setData({
+        traces: arr.reverse(),
+        item
+      });
     }
   }
 })

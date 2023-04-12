@@ -11,6 +11,7 @@
   width: 686rpx;
   margin: 16rpx 32rpx;
   background-color: #2A3D52;
+  border-radius: 10rpx;
 
   //物流基本信息
   .cont-box {
@@ -119,6 +120,7 @@
   //物流详情（下拉）
   .dropDown {
     display: none;
+    padding-bottom: 44rpx;
     .divide {
       width: 622rpx;
       height: 12rpx;
@@ -129,23 +131,69 @@
     }
 
     .dropDown-detail {
-      width: 562rpx;
+      width: 540rpx;
       height: 108rpx;
       margin-left: 78rpx;
       margin-bottom: 44rpx;
-      background-color: pink;
+      &:last-child {
+        margin-bottom: 0;
+        .line-item {
+          display: none;
+        }
+      }
+      .line {
+        position: absolute;
+        left: 44rpx;
+        width: 12rpx;
+        height: 152rpx;
+        .line-item {
+          position: absolute;
+          width: 2rpx;
+          height: 100%;
+          top: 10rpx;
+          left: 5rpx;
+          background-color: #485A6DFF;
+        }
+        .circle {
+          position: absolute;
+          width: 16rpx;
+          height: 16rpx;
+          left: -2rpx;
+          top: 8rpx;
+          background-color:#959CADFF;
+          border-radius: 50%;
+        }
+      }
+      .detail-top {
+        margin-bottom: 12rpx;
+        font-size: 26rpx;
+        font-weight: 700;
+        color: #959CADFF;
+        .top-time {
+          margin-left: 16rpx;
+          font-size: 20rpx;
+        }
+      }
+      .detail-bottom {
+        font-size: 20rpx;
+        font-weight: 500;
+        color: #959CADFF;
+      }
     }
-  }
-}
-
-.cont-selected {
-  .delivery .drop-btn {
-    transition: linear .3s;
-    transform: rotate(180deg);
-  }
-
-  .dropDown {
-    display: block;
+    
+    .detail-selected {
+      .line {
+        .circle {
+          background-color: #AEFFE8FF;
+        }
+      }
+      .detail-top {
+        color: #AEFFE8FF;
+      }
+      .detail-bottom {
+        color: #fff;
+      }
+    }
   }
 }
 
