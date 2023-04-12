@@ -23,8 +23,16 @@ var includes = function(arr,ele) {
   return arr.indexOf(ele) !== -1;
 }
 
+// var getSteps = function(arr,steps) {
+//   arr.traces.forEach(function(item,index) {
+//     steps[index].desc = item.AcceptStation
+//   })
+//   return steps;
+// }
+  
 module.exports = {
   deliveried: delivery.deliveried,
   undelivery: delivery.undelivery,
-  includes: includes
+  includes: includes,
+  // getSteps: getSteps
 }
