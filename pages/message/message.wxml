@@ -1,7 +1,7 @@
 <!--pages/message/message.wxml-->
 <!-- 有数据内容 -->
 <view class="cont-box" wx:if="{{logisticsList && logisticsList.length > 0}}">
-  <message-cont></message-cont>
+  <message-cont wx:for="{{logisticsList}}" wx:key="delivery_no" item="{{item}}"></message-cont>
 </view>
 <!-- 无数据内容 -->
 <view class="empty" wx:else>

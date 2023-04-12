@@ -5,10 +5,6 @@
   background-position: center;
 }
 
-.down {
-  transition: linear .3s;
-  transform: rotate(180deg);
-}
 
 .cont {
   position: relative;
@@ -122,28 +118,33 @@
 
   //物流详情（下拉）
   .dropDown {
+    display: none;
     .divide {
-      position: absolute;
       width: 622rpx;
       height: 12rpx;
-      left: 32rpx;
+      margin-left: 32rpx;
+      margin-bottom: 32rpx;
       background-image: url(https://choukaji.oss-cn-hangzhou.aliyuncs.com/uploads/static/dist_test/message/cutline_price.png);
       @include bgi();
     }
 
     .dropDown-detail {
-      padding-top: 32rpx;
-
-      .van-steps {
-        background-color: #2A3D52;
-        font-size: 26rpx;
-        font-weight: 700;
-
-        .van-step__circle {
-          width: 16rpx;
-          height: 16rpx;
-        }
-      }
+      width: 562rpx;
+      height: 108rpx;
+      margin-left: 78rpx;
+      margin-bottom: 44rpx;
+      background-color: pink;
     }
+  }
+}
+
+.cont-selected {
+  .delivery .drop-btn {
+    transition: linear .3s;
+    transform: rotate(180deg);
+  }
+
+  .dropDown {
+    display: block;
   }
 }

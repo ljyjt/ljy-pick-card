@@ -10,7 +10,7 @@
   <scroll-view scroll-y wx:if="{{deliveryList && deliveryList.length>0}}">
     <!-- 待发货 -->
     <block wx:if="{{active === 0}}">
-        <view class="order-item" wx:for="{{delivery.undelivery(deliveryList)}}" wx:key="id">
+        <view class="order-item" wx:for="{{filter.undelivery(deliveryList)}}" wx:key="id">
           <image class="item-image" src="{{item.series[0].draw_img}}" />
           <view class="item-msg">
             <text class="title">{{item.series[0].title}}</text>
@@ -23,7 +23,7 @@
     </block>
     <!-- 已发货 -->
     <block wx:else>
-      <view class="order-item" wx:for="{{delivery.deliveried(deliveryList)}}" wx:key="id">
+      <view class="order-item" wx:for="{{filter.deliveried(deliveryList)}}" wx:key="id">
           <image class="item-image" src="{{item.series[0].draw_img}}" />
           <view class="item-msg">
             <text class="title">{{item.series[0].title}}</text>
@@ -44,4 +44,4 @@
   <!-- 悬浮卡片发货 -->
   <navigator class="card-delivery" url="/pages/chooseCard/chooseCard"></navigator>
 </view>
-<wxs src="../../filter/filter.wxs" module="delivery"/>
+<wxs src="../../filter/filter.wxs" module="filter"/>
