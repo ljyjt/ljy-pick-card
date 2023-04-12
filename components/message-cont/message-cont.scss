@@ -148,3 +148,14 @@
     display: block;
   }
 }
+
+.cont-selected {
+  .delivery .drop-btn {
+    transition: linear .3s;
+    transform: rotate(180deg);
+  }
+
+  .dropDown {
+    display: block;
+  }
+}
